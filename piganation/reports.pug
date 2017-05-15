@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="keywords", content="6Estates")
+    meta(name="description", content="")
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
+    title 6Estates
+    link(rel="shortcut icon", type="image/ico", href="https://img.6estates.com/favicon.ico")
+
+  body
+
+    #addFixedHeader
+      include reportHeader
+
+    .main
+      div
+        #reportsContainer
+          #reportsHeader
+            #reportsImage
+            #reportsTitle
+              .container-fluid
+                include reportHeader
+                .reportsTitleDesc
+                  p.reportsTotalTitle 6Estates Reports
+                  p.reportsTotalDesc Uncover insights to gain a better understanding of your market and target audience
+
+          .container-fluid
+            .contentPadding
+              .reportsDetail
+                nav(aria-label="Page navigation").row#reportsPagination
+
+                ul.sync-pagination#papagination
+
+
+
+
+      include ../../common/footer
+
+      //modal
+      .modal.fade#downloadReport(role="dialog")
+        .modal-dialog
+
+          .modal-content
+            .modal-body
+              .downloadheader.center
+                p.downloadTitle Download the report
+                p.downloadLine
+                p.downloadDec.
+                  We are here to help. Want to learn more about our services?<br>
+                  Please get in touch, we'd love to hear from you!
+              form
+                .container-fluid
+                  .row.center.downloadForm
+                    .col-12
+                      input#inputName(placeholder="Name")
+                    .col-12
+                      input#inputEmail(placeholder="Email")
+                    .col-12
+                      input#inputPhone(placeholder="Phone")
+                    .col-12
+                      textarea#reasonDownload(rows="4" placeholder="Why want to download")
+
+                    .col-6
+                      button(data-dismiss="modal").modalCancelBtn Cancel
+                    .col-5
+                      button#submit.modalSumbitBtn Download
+
+
+
